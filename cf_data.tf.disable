@@ -1,1 +1,2 @@
+# Retirez le .disable pour activer, seulement si vous utilisez CloudFlare
 data "cloudflare_ip_ranges" "cloudflare" {}

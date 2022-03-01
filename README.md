@@ -1,25 +1,20 @@
-# Build and deploy your infrastructure on OCI with Terraform
+# Deployer son infrastructure sur Oracle Cloud avec Terraform
 
 <div id="top"></div>
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-This is a bundle of modules for deployement on Oracle Cloud using Terraform. Great thing about this is _always free_ offer. You can get documentation about the offer [here](https://www.oracle.com/cloud/free/#always-free)
+## A propos
+C'est un ensemble de modules [Terraform](https://www.terraform.io/) permettant de deployer son infrastructure sur [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/fr/cloud/) gratuitement et a vie grace a l'offre _always free_ d'Oracle.
+Certains modules sont obligatoires d'autres optionnels.
 
-You can find a guide on by blog [here](https://jkarabenli.dev/posts/infra-as-code-oci/) (is in french) 
+Pour en savoir plus vous pouvez consulter [l'article que j'ai rédigé ici](https://jkarabenli.dev/posts/infra-as-code-oci/) et proposer une modification. 
 
-
-### Built With
-
+## Stack utilisée
 * [Terraform](https://www.terraform.io/) 
-* [Bash]()
 
-<!-- GETTING STARTED -->
-## Getting Started
-### Prerequisites
-
-* [terraform](https://www.terraform.io/downloads)
+## Prérequis
+* [Terraform](https://www.terraform.io/downloads)
 ```sh
 $ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 $ sudo apt-add-repository "deb [arch=amd64] https://apt.      releases.hashicorp.com $(lsb_release -cs) main"
@@ -28,29 +23,30 @@ $ sudo apt-get update && sudo apt-get install terraform
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Setup main script
-- [x] Have separation of concerns (with separated conf file)
-- [x] Add block storage module
-- [x] Add Cloudflare ip's dynamic population
-- [x] Generate ssh keys directy in Terraform
-- [ ] Add load balancer module
+- [x] Configurer le script principal.
+- [x] Faire du SOC et avoir un fichier par module.
+- [x] Ajouter le module `block stoage`.
+- [x] Ajouter l'ajout dynamique des IP CloudFlare dans les regles de sécurité.
+- [x] Génrer les clés __SSH__ d'acces aux vm directement dans Terraform
+- [ ] Ajouter le module `load balancer`
 
-See the [open issues](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform/issues) for a full list of proposed features (and known issues).
+Voir les [issues en cours](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform/issues) pour voir la liste complete des fonctionalités proposées et les bugs existants.
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribuer
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Les contributions sont ce qui fait de la communauté open source un endroit incroyable pour apprendre, s'inspirer et créer. Toutes les contributions que vous apportez serront __grandement appréciées__.
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Si vous avez une suggestion qui améliorerait le projet, vous pouvez `fork` le repo et créer une `pull request`. Vous pouvez aussi simplement ouvrir une `issue` avec le tag "amélioration".
+N'oubliez pas de mettre une étoile au projet ! Merci encore!
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+
+1. Fork le projet
+2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
+3. Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Push sur votre branche (`git push origin feature/AmazingFeature`)
+5. Ouvrir une __Pull Request__
 
 
 <!-- CONTACT -->
@@ -58,4 +54,4 @@ Don't forget to give the project a star! Thanks again!
 
 mail: __contact@jkarabenli.dev__
 
-Project Link: [https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform)
+Lien du projet: [https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform)

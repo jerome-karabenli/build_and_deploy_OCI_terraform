@@ -8,7 +8,7 @@ resource "oci_core_default_security_list" "default_security_list" {
     destination = "0.0.0.0/0"
     protocol    = "all"
   }
-
+  # n'ouvre l'acces qu'a votre adresse IP publique
   ingress_security_rules {
     protocol = 1 # icmp
     source   = "${local.ifconfig_co_json.ip}/32"
@@ -66,28 +66,36 @@ resource "oci_core_default_security_list" "default_security_list" {
 }
 
 
-#  UNCOMMENT THE RESSOURCE BELOW IF YOU USE CLOUDFLARE
-# resource "oci_core_security_list" "custom_security_list" {
-#   compartment_id = var.oci_compartment_ocid
-#   vcn_id         = oci_core_vcn.default_oci_core_vcn.id
-#   display_name = "Custom security list"
+resource "oci_core_security_list" "custom_security_list" {
+  compartment_id = var.oci_compartment_ocid
+  vcn_id         = oci_core_vcn.default_oci_core_vcn.id
+  display_name = "Custom security list"
 
-#   dynamic ingress_security_rules {
-#     for_each     = data.cloudflare_ip_ranges.cloudflare.ipv4_cidr_blocks
-#     content {
-#       protocol = 6 # tcp
-#       source   = ingress_security_rules.value
+  # Décommentez ici si vous utilisez CloudFlare
+  # dynamic ingress_security_rules {
+  #   for_each     = data.cloudflare_ip_ranges.cloudflare.ipv4_cidr_blocks
+  #   content {
+  #     protocol = 6 # tcp
+  #     source   = ingress_security_rules.value
 
-#       description = "Allow HTTPS from cloudflare"
+  #     description = "Allow HTTPS from cloudflare"
 
-#       tcp_options {
-#         min = 443
-#         max = 443
-#       }
-#     }
-#   }
+  #     tcp_options {
+  #       min = 443
+  #       max = 443
+  #     }
+  #   }
+  # }
 
-#   freeform_tags = {
-#     "${var.oci_tag_key}" = "${var.oci_tag_value}"
-#   }
-# }
+  #  Commentez ici si vous utilisez CloudFlare, ATTENTION cette regle ouvre tous les ports a tout le monde
+  ingress_security_rules {
+    protocol = "all"
+    source   = "0.0.0.0/0"
+
+    description = "Allow all from vcn subnet"
+  }
+
+  freeform_tags = {
+    "${var.oci_tag_key}" = "${var.oci_tag_value}"
+  }
+}

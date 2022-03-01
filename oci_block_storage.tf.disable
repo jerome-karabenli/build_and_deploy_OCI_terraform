@@ -1,4 +1,4 @@
-# REMOVE .DISABLE FOR USE
+# Retirez l'extension .disable pour activer le module.
 
 resource "oci_core_volume" "backup_volume" {
     #Required
@@ -6,19 +6,19 @@ resource "oci_core_volume" "backup_volume" {
     #Optional
     availability_domain = data.oci_identity_availability_domains.list_availability_domains.availability_domains[0].name
     display_name = "backup_volume"
-    size_in_gbs = "100"
+    size_in_gbs = "100" # je vous conseil de rester sur des multiple de 50 et max 150.
     is_auto_tune_enabled = true
 }
 
 resource "oci_core_volume_attachment" "backup_volume_attachment" {
     #Required
     attachment_type = "paravirtualized"
-    instance_id = oci_core_instance.ubuntu_1.id
+    instance_id = oci_core_instance.ubuntu_1.id # indiquez ici sur quel vm vous voulez attacher le volume
     volume_id = oci_core_volume.backup_volume.id
 
     #Optional
     display_name = "backup_volume_attachment"
     is_pv_encryption_in_transit_enabled = true
     is_read_only = false
-    is_shareable = false
+    is_shareable = false # si true vous pourrez attacher le volume a plusieurs vm a la fois
 }

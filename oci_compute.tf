@@ -30,7 +30,7 @@ resource "oci_core_instance" "ubuntu_1" {
 
   create_vnic_details {
     assign_private_dns_record = "true"
-    assign_public_ip          = "true"
+    assign_public_ip          = "true" # Passez la valeur a false pour ne pas exposer votre vm sur internet
     subnet_id                 = oci_core_subnet.default_oci_core_subnet10.id
   }
 
@@ -48,8 +48,8 @@ resource "oci_core_instance" "ubuntu_1" {
 
   shape = "VM.Standard.A1.Flex"
   shape_config {
-    memory_in_gbs = "6"
-    ocpus         = "1"
+    memory_in_gbs = "6" # Vous pouvez passer cette valeur a 24 max, 6 12 18 24
+    ocpus         = "1" # vous pouvez passer cette valeur a 4 max, 1 2 3 4
   }
 
   source_details {
@@ -62,6 +62,8 @@ resource "oci_core_instance" "ubuntu_1" {
   }
 
 }
+
+# Pour créer d'autres VM décommentez simplement
 
 #NODE 2
 # resource "oci_core_instance" "ubuntu_2" {
