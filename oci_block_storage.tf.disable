@@ -1,0 +1,24 @@
+# REMOVE .DISABLE FOR USE
+
+resource "oci_core_volume" "backup_volume" {
+    #Required
+    compartment_id = var.oci_compartment_ocid
+    #Optional
+    availability_domain = data.oci_identity_availability_domains.list_availability_domains.availability_domains[0].name
+    display_name = "backup_volume"
+    size_in_gbs = "100"
+    is_auto_tune_enabled = true
+}
+
+resource "oci_core_volume_attachment" "backup_volume_attachment" {
+    #Required
+    attachment_type = "paravirtualized"
+    instance_id = oci_core_instance.ubuntu_1.id
+    volume_id = oci_core_volume.backup_volume.id
+
+    #Optional
+    display_name = "backup_volume_attachment"
+    is_pv_encryption_in_transit_enabled = true
+    is_read_only = false
+    is_shareable = false
+}
