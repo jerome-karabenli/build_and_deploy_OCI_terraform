@@ -1,3 +1,5 @@
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_instance
+
 #NODE 1
 resource "oci_core_instance" "ubuntu_1" {
   agent_config {

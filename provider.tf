@@ -1,3 +1,5 @@
+# Doc Terraform https://registry.terraform.io/providers/hashicorp/oci/latest/docs
+
 terraform {
   required_providers {
     cloudflare = {
@@ -10,7 +12,6 @@ terraform {
 provider "cloudflare" {
   email   = var.cf_email
   api_key = var.cf_api_key
-  api_user_service_key = var.cf_api_user_service_key
 }
 
 provider "oci" {

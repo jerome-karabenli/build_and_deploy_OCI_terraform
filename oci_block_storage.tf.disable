@@ -1,5 +1,6 @@
 # Retirez l'extension .disable pour activer le module.
 
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_volume
 resource "oci_core_volume" "backup_volume" {
     #Required
     compartment_id = var.oci_compartment_ocid
@@ -10,6 +11,7 @@ resource "oci_core_volume" "backup_volume" {
     is_auto_tune_enabled = true
 }
 
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_volume_attachment
 resource "oci_core_volume_attachment" "backup_volume_attachment" {
     #Required
     attachment_type = "paravirtualized"

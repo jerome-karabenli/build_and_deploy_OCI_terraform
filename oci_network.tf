@@ -1,5 +1,5 @@
-# Theses ressources are not optionnal, must be present
 
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_vcn
 resource "oci_core_vcn" "default_oci_core_vcn" {
   compartment_id = var.oci_compartment_ocid   # required/updatable
 
@@ -12,7 +12,7 @@ resource "oci_core_vcn" "default_oci_core_vcn" {
   }
 }
 
-# THIS SUBNET IS OPEN TO WEB, AND APPLY CUSTOM SECURITY RULES
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_subnet
 resource "oci_core_subnet" "default_oci_core_subnet10" {
   cidr_block        = var.oci_core_subnet_cidr10
   compartment_id    = var.oci_compartment_ocid
@@ -26,7 +26,6 @@ resource "oci_core_subnet" "default_oci_core_subnet10" {
   }
 }
 
-# THIS SUBNET ALLOW ONLY CONNECTION FROM YOUR HOME IP ADDRESS
 resource "oci_core_subnet" "oci_core_subnet11" {
   cidr_block        = var.oci_core_subnet_cidr11
   compartment_id    = var.oci_compartment_ocid
@@ -40,6 +39,7 @@ resource "oci_core_subnet" "oci_core_subnet11" {
   }
 }
 
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_internet_gateway
 resource "oci_core_internet_gateway" "default_oci_core_internet_gateway" {
   compartment_id = var.oci_compartment_ocid
   display_name   = "Internet Gateway Default OCI core vcn"
@@ -50,6 +50,7 @@ resource "oci_core_internet_gateway" "default_oci_core_internet_gateway" {
   }
 }
 
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_route_table
 resource "oci_core_default_route_table" "default_oci_core_default_route_table" {
   route_rules {
     destination       = "0.0.0.0/0"

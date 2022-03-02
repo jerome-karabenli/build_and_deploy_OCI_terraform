@@ -8,7 +8,7 @@
 C'est un ensemble de modules [Terraform](https://www.terraform.io/) permettant de deployer son infrastructure sur [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/fr/cloud/) gratuitement et a vie grace a l'offre _always free_ d'Oracle.
 Certains modules sont obligatoires d'autres optionnels.
 
-Pour en savoir plus vous pouvez consulter [l'article que j'ai rédigé ici](https://jkarabenli.dev/posts/infra-as-code-oci/) et proposer une modification. 
+Si vous n'etes pas familiarisé avec __Terraform__ vous pouvez consulter [__cet article__](https://jkarabenli.dev/posts/infra-as-code-oci/).
 
 ## Stack utilisée
 * [Terraform](https://www.terraform.io/) 
@@ -26,9 +26,9 @@ $ sudo apt-get update && sudo apt-get install terraform
 - [x] Configurer le script principal.
 - [x] Faire du SOC et avoir un fichier par module.
 - [x] Ajouter le module `block stoage`.
-- [x] Ajouter l'ajout dynamique des IP CloudFlare dans les regles de sécurité.
-- [x] Génrer les clés __SSH__ d'acces aux vm directement dans Terraform
-- [ ] Ajouter le module `load balancer`
+- [x] Ajout dynamique des IP CloudFlare dans les regles de sécurité.
+- [x] Génrer les clés __SSH__ d'acces aux vm directement dans Terraform.
+- [ ] Ajouter le module `load balancer`.
 
 Voir les [issues en cours](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform/issues) pour voir la liste complete des fonctionalités proposées et les bugs existants.
 
@@ -38,7 +38,7 @@ Voir les [issues en cours](https://github.com/jerome-karabenli/build_and_deploy_
 
 Les contributions sont ce qui fait de la communauté open source un endroit incroyable pour apprendre, s'inspirer et créer. Toutes les contributions que vous apportez serront __grandement appréciées__.
 
-Si vous avez une suggestion qui améliorerait le projet, vous pouvez `fork` le repo et créer une `pull request`. Vous pouvez aussi simplement ouvrir une `issue` avec le tag "amélioration".
+Si vous avez une suggestion qui améliorerait le projet, vous pouvez `fork` le repo et créer une `pull request`. Vous pouvez aussi simplement ouvrir une `issue` avec le tag "enhancement".
 N'oubliez pas de mettre une étoile au projet ! Merci encore!
 
 
@@ -50,8 +50,8 @@ N'oubliez pas de mettre une étoile au projet ! Merci encore!
 
 
 <!-- CONTACT -->
-## Contact
+## Liens
 
-mail: __contact@jkarabenli.dev__
+Lien du blog: [jkarabenli.dev](https://jkarabenli.dev/posts)
 
-Lien du projet: [https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform)
+Lien du projet: [Github](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform)

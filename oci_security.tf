@@ -1,4 +1,5 @@
 
+# Doc https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_security_list
 resource "oci_core_default_security_list" "default_security_list" {
   compartment_id             = var.oci_compartment_ocid
   manage_default_resource_id = oci_core_vcn.default_oci_core_vcn.default_security_list_id

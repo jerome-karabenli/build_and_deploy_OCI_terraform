@@ -1,2 +1,4 @@
 # Retirez le .disable pour activer, seulement si vous utilisez CloudFlare
+
+# Doc https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/data-sources/ip_ranges
 data "cloudflare_ip_ranges" "cloudflare" {}
