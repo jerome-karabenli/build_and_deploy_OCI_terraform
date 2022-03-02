@@ -13,11 +13,9 @@ Certains modules sont obligatoires d'autres optionnels.
 
 ## Prérequis
 * [Terraform](https://www.terraform.io/downloads)
-```sh
-$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-$ sudo apt-add-repository "deb [arch=amd64] https://apt.      releases.hashicorp.com $(lsb_release -cs) main"
-$ sudo apt-get update && sudo apt-get install terraform
-```
+* [Compte OCI](https://signup.cloud.oracle.com/?intcmp=OcomFreeTier&language=en_FR)
+* [Compte CloudFlare(optionnel)](https://dash.cloudflare.com/sign-up)
+
 <!-- ROADMAP -->
 ## Roadmap
 
