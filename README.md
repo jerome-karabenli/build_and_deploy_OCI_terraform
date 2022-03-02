@@ -8,8 +8,6 @@
 C'est un ensemble de modules [Terraform](https://www.terraform.io/) permettant de deployer son infrastructure sur [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/fr/cloud/) gratuitement et a vie grace a l'offre _always free_ d'Oracle.
 Certains modules sont obligatoires d'autres optionnels.
 
-Si vous n'etes pas familiarisé avec __Terraform__ vous pouvez consulter [__cet article__](https://jkarabenli.dev/posts/infra-as-code-oci/).
-
 ## Stack utilisée
 * [Terraform](https://www.terraform.io/) 
 
@@ -32,6 +30,9 @@ $ sudo apt-get update && sudo apt-get install terraform
 
 Voir les [issues en cours](https://github.com/jerome-karabenli/build_and_deploy_OCI_terraform/issues) pour voir la liste complete des fonctionalités proposées et les bugs existants.
 
+<!-- HOW TO -->
+## Documentation
+Vous trouverez [__un article sur mon blog__](https://jkarabenli.dev/posts/infra-as-code-oci/) expliquant l'utilisation des fichiers dans ce repo.
 
 <!-- CONTRIBUTING -->
 ## Contribuer
