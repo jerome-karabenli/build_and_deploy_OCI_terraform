@@ -1,11 +1,11 @@
-# Deployer son infrastructure sur Oracle Cloud avec Terraform
+# Provisionner son infrastructure sur Oracle Cloud avec Terraform
 
 <div id="top"></div>
 
 
 <!-- ABOUT THE PROJECT -->
 ## A propos
-C'est un ensemble de modules [Terraform](https://www.terraform.io/) permettant de deployer son infrastructure sur [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/fr/cloud/) gratuitement et a vie grace a l'offre _always free_ d'Oracle.
+C'est un ensemble de modules [Terraform](https://www.terraform.io/) permettant de provisionner son infrastructure sur [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/fr/cloud/) gratuitement et a vie grace a l'offre _always free_ d'Oracle.
 Certains modules sont obligatoires d'autres optionnels.
 
 ## Stack utilisée
